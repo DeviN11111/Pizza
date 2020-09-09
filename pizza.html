@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            var SmallPizza = prompt("Hoeveel Small pizzas wilt u?");
+            var MediumPizza = prompt("Hoeveel Medium pizzas wilt u?");
+            var LargePizza = prompt("hoeveel Large pizzas wilt u?");
+
+            const SMALLPRIZE = 6
+            const MEDIUMPRIZE = 8
+            const LARGEPRIZE = 9
+
+            TotalPrize = Number(SmallPizza) * Number(SMALLPRIZE) + Number(MediumPizza) * Number(MEDIUMPRIZE) + Number(LargePizza) *Number(LARGEPRIZE)
+            document.write("<h1>" + "U heeft: " + SmallPizza + " Small pizza's besteld " +"<br>" + "</h1>"); 
+            document.write("<h1>" + "U heeft: " + MediumPizza + " Medium pizza's besteld " + "<br>" + "</h1>");
+            document.write("<h1>" + "U heeft: " + LargePizza + " Large pizza's besteld " + "<br>" + "</h1>"); 
+            document.write("<h1>" + "Uw totaal is: " + "€" + TotalPrize + ",-" + "</h1>");
+        </script>
+          <form action="https://www.shorturl.at/rvyzD">
+          <input type="Submit" value="Bestel de pizza!!" />
+          </form>
+    </body>
+</html>
