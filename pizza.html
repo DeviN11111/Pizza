@@ -1,22 +1,53 @@
 <html>
     <body>
         <script>
-            var SmallPizza = prompt("Hoeveel Small pizzas wilt u?");
-            var MediumPizza = prompt("Hoeveel Medium pizzas wilt u?");
-            var LargePizza = prompt("hoeveel Large pizzas wilt u?");
+            var SmallPizza = prompt("Hoeveel Small pizzas wilt u?"); // Hoeveel pizzas je wilt
+            var MediumPizza = prompt("Hoeveel Medium pizzas wilt u?"); // Hoeveel pizzas je wilt
+            var LargePizza = prompt("hoeveel Large pizzas wilt u?"); // Hoeveel pizzas je wilt
 
-            const SMALLPRIZE = 6
-            const MEDIUMPRIZE = 8
-            const LARGEPRIZE = 9
+            const SMALLPRIZE = 6 // De prijs van de pizzas
+            const MEDIUMPRIZE = 8 // De prijs van de pizzas
+            const LARGEPRIZE = 9 // De prijs van de pizzas
 
-            TotalPrize = Number(SmallPizza) * Number(SMALLPRIZE) + Number(MediumPizza) * Number(MEDIUMPRIZE) + Number(LargePizza) *Number(LARGEPRIZE)
-            document.write("<h1>" + "U heeft: " + SmallPizza + " Small pizza's besteld " +"<br>" + "</h1>"); 
-            document.write("<h1>" + "U heeft: " + MediumPizza + " Medium pizza's besteld " + "<br>" + "</h1>");
-            document.write("<h1>" + "U heeft: " + LargePizza + " Large pizza's besteld " + "<br>" + "</h1>"); 
-            document.write("<h1>" + "Uw totaal is: " + "€" + TotalPrize + ",-" + "</h1>");
+            TotalPrize = Number(SmallPizza) * Number(SMALLPRIZE) + Number(MediumPizza) * Number(MEDIUMPRIZE) + Number(LargePizza) * Number(LARGEPRIZE) // hier word de totaal prijs van alle pizzas berekend
+
+
+            if (TotalPrize > 20) {
+				  TotalPrize = TotalPrize - 5;
+				  document.write("<h1>" + "Je hebt 5€ korting gekregen omdat je meer dan 20€ uitgaf!" + "</h1>")  // Koring als je meer dan 20 uitgeeft
+				}
+			if (TotalPrize < 20){
+				TotalPrize = TotalPrize + 5;
+				document.write("<h1>" + "U heeft minder dan 20 euro uitgegeven u moet 5 euro verzend kosten betalen" +  "</h1>") // zo niet krijg je geen korting
+			}
+			else{
+				document.write("<h1>" + "U heeft meer dan 20 euro uitgegeven u krijgt nu gratis bezorging" +  "</h1>") // gratis bezoring als je meer dan 20 uit geeft
+			}
+
+			if (SmallPizza == 1){
+				document.write("<h1>" + "U heeft: " + SmallPizza + " Small pizza besteld " +"<br>" + "</h1>");  // Laat zien hoeveel pizzas je hebt besteld
+			}
+			else{
+				document.write("<h1>" + "U heeft: " + SmallPizza + " Small pizza's besteld " +"<br>" + "</h1>"); // Laat zien hoeveel pizzas je hebt besteld
+			}
+
+			if (MediumPizza == 1){
+				document.write("<h1>" + "U heeft: " + MediumPizza + " Medium pizza besteld " +"<br>" + "</h1>"); // Laat zien hoeveel pizzas je hebt besteld
+			}
+			else{
+				document.write("<h1>" + "U heeft: " + MediumPizza + " Medium pizza's besteld " +"<br>" + "</h1>"); // Laat zien hoeveel pizzas je hebt besteld
+			}
+
+			if (LargePizza == 1){
+				document.write("<h1>" + "U heeft: " + LargePizza + " Large pizza besteld " +"<br>" + "</h1>"); // Laat zien hoeveel pizzas je hebt besteld
+			}
+			else{
+				document.write("<h1>" + "U heeft: " + LargePizza + " Small pizza's besteld " +"<br>" + "</h1>"); // Laat zien hoeveel pizzas je hebt besteld
+			}
+            document.write("<h1>" + "Uw totaal is: " + "€" + TotalPrize + ",-" + "</h1>"); // laat de totaal prijs (met kortingen etc inbegrepen)
         </script>
-          <form action="https://www.shorturl.at/rvyzD">
-          <input type="Submit" value="Bestel de pizza!!" />
+          <form action="https://www.shorturl.at/rvyzD"> 
+          <input type="Submit" value="Bestel de pizza!!" /> 
           </form>
     </body>
 </html>
